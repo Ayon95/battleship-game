@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-family: "Black Ops One", sans-serif;
+	color: rgb(235, 180, 0);
+}
+
+body {
+	background-color: rgb(27, 27, 27);
+	padding: 0 1rem 1rem 1rem;
+	font-size: 1.6rem;
+}
+
+.btn {
+	font-family: "Black Ops One";
+	font-size: 1.6rem;
+	/* font-weight: 600; */
+	padding: 1rem 2rem;
+	border: none;
+	outline: none;
+	border-radius: 5rem;
+	background-color: rgb(207, 212, 228);
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.btn:hover {
+	background-color: rgb(221, 226, 243);
+	transform: translateY(-0.2rem);
+}
+
+.btn:active {
+	background-color: rgb(207, 212, 228);
+	transform: translateY(0);
+}
+
+.btn:focus {
+	box-shadow: 0 0 2px 3px rgb(235, 180, 0);
+}
+
+.game-header {
+	text-align: center;
+	padding: 3rem 0;
+}
+
+.game-header h1 {
+	margin-bottom: 0.5rem;
+}
+
+.game-header h1,
+.game-header h3 {
+	font-weight: 400;
+}
+
+.game-header,
+.game-content {
+	width: 90%;
+	max-width: 70rem;
+	margin: 0 auto;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(7, max-content);
+	justify-content: center;
+}
+
+.cell {
+	width: clamp(3.4rem, 10vw, 6rem);
+	height: clamp(3.4rem, 10vw, 6rem);
+	background-color: rgb(31, 46, 77);
+	border-radius: 0.5rem;
+	transition: all 0.2s;
+	cursor: pointer;
+	margin: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cell:hover {
+	background-color: rgb(37, 56, 92);
+}
+
+.hit,
+.miss {
+	color: #222;
+	font-size: 1.3rem;
+}
+
+.hit,
+.hit:hover {
+	background-color: rgb(85, 221, 126);
+}
+
+.miss,
+.miss:hover {
+	background-color: rgb(221, 106, 85);
+}
+
+.message {
+	margin: 2rem 0;
+	font-size: 2rem;
+}
+
+.non-board-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.game-stats-container {
+	margin-bottom: 2rem;
+}
+
+.game-stats-container p:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 22.5em) {
+	html {
+		font-size: 50%;
+	}
+
+	.hit,
+	.miss {
+		font-size: 1.1rem;
+	}
+}
+
+@media only screen and (min-width: 56.25em) {
+	html {
+		font-size: 72%;
+	}
+	.game-content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.non-board-container {
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 75em) {
+	html {
+		font-size: 85%;
+	}
+}
+
+@media only screen and (min-width: 112.5em) {
+	html {
+		font-size: 120%;
+	}
+}
