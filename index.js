@@ -137,7 +137,7 @@ function initialize() {
 
 function endGame() {
 	isPlaying = false;
-	if (score === 0) displayMessage("Game over! You are out of ammo!");
+	if (score === 0) displayMessage("Game over!");
 	if (numShips === 0) displayMessage("You sank all the ships!");
 	highscore = score > highscore ? score : highscore;
 	highscoreDisplay.textContent = highscore;
@@ -169,12 +169,12 @@ function checkHitOrMiss(cell) {
 		shotsNumDisplay.textContent = score;
 		accuracyDisplay.textContent = `${accuracy}%`;
 		displayMiss(cell);
+		if (score === 0) endGame();
 	}
 }
 
 function updateState(event) {
-	if (score === 0) return endGame();
-	if (isPlaying && score > 0) {
+	if (isPlaying) {
 		displayMessage("");
 		const clickedCell = event.target;
 		if (clickedCell.textContent === "") {
