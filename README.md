@@ -15,3 +15,43 @@ This project helped me practice DOM manipulation, state management, and problem-
 - The player will get 15 shots to destroy all the ships
 
 Link to the app: https://ayon95.github.io/js-battleship/
+
+## Tools and technologies used
+
+- HTML
+- CSS
+- JavaScript
+
+## Deployment
+
+Deployed with [GitHub Pages](https://pages.github.com/).
+
+## Get started
+
+Open up a terminal and clone this repo:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/Ayon95/js-battleship.git
+
+# Navigate to the project folder
+$ cd js-battleship
+
+# Remove current origin repository
+$ git remote remove origin
+
+# If you want, you can add a new remote repository
+$ git remote add origin https://github.com/<your-github-username>/<your-repo-name>.git
+```
+
+Then, install the project dependencies using npm:
+
+```bash
+# Install dependencies
+$ npm install
+
+# Start development server
+$ npm start
+```
+
+This will start a development server and open the app in your default browser.
